@@ -1,14 +1,19 @@
-# Project 2 WDI13
+# Project 2 WDI13 by Joshua Schoenfeld
 
-## Schoenfeld, Joshua
+## Application Name: Petme
 
-### [Github link](https://github.com/Brocier/project2WDI13)
+### App Overview
 
-### [Heroku Link](https://schoenfeld-project2-wdi13.herokuapp.com/)
+Petme is a basic social networking framework project I've created to emulate the basic functions of sites like imgur and reddit.
+I hope to be able to implement multiple users who can add their multiple pets, and each of those pets can have multiple pictures and other identifying information.
 
-### [Trello Board](https://trello.com/b/l9vYTumX/wdi-project-2)
+#### [Github link](https://github.com/Brocier/project2WDI13)
 
-### [Figma Wireframes](https://www.figma.com/file/SlvcWeb3e0szCOA9F2KoXX1F/WDI13-Project-2)
+#### [Heroku Link](https://schoenfeld-project2-wdi13.herokuapp.com/)
+
+#### [Trello Board](https://trello.com/b/l9vYTumX/wdi-project-2)
+
+#### [Figma Wireframes](https://www.figma.com/file/SlvcWeb3e0szCOA9F2KoXX1F/WDI13-Project-2)
 
 #### Technologies used
 
@@ -19,11 +24,15 @@
 * HBS - view handler
 * dotenv - loads environment variables, such as the DB
 * body-parser - translator of rawtext
+* trello - user story tracking
+* figma - wire-framing
+* vs code - text editor of choice
 
 #### Approach taken
 
-* Started off getting a baseline project working
-* Worked on getting a fleshed out README for me to build on later.
+* Started off getting a baseline project working with npm and express-generator.
+* Worked on getting a fleshed out README to build on later.
+* Built out an ERD and wireframe.
 
 #### Unsolved problems
 

@@ -15,6 +15,26 @@ I hope to be able to implement multiple users who can add their multiple pets, a
 
 #### [Figma Wireframes](https://www.figma.com/file/SlvcWeb3e0szCOA9F2KoXX1F/WDI13-Project-2)
 
+### Entity Relationship Diagrams (Database Modeling)
+
+User = {
+    ID: ID,
+    username: String,
+    password: String,
+    pets: [petSchema],
+}
+Pets = {
+    ID: ID,
+    petName: String,
+    age: Number,
+    photos:[photoSchema],
+}
+Photos = {
+    ID: ID,
+    photoName: String,
+    photoLink: String
+}
+
 #### Technologies used
 
 * Node - js runtime
@@ -27,6 +47,7 @@ I hope to be able to implement multiple users who can add their multiple pets, a
 * trello - user story tracking
 * figma - wire-framing
 * vs code - text editor of choice
+* imgur - image hosting
 
 #### Approach taken
 

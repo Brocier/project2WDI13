@@ -8,6 +8,8 @@
 
 ### [Trello Board](https://trello.com/b/l9vYTumX/wdi-project-2)
 
+### [Figma Wireframes](https://www.figma.com/file/SlvcWeb3e0szCOA9F2KoXX1F/WDI13-Project-2)
+
 #### Technologies used
 
 * Node - js runtime

@@ -7,16 +7,17 @@
 Petme is a basic social networking framework project I've created to emulate the basic functions of sites like imgur and reddit.
 I hope to be able to implement multiple users who can add their multiple pets, and each of those pets can have multiple pictures and other identifying information.
 
-#### [Github link](https://github.com/Brocier/project2WDI13)
-
 #### [Heroku Link](https://schoenfeld-project2-wdi13.herokuapp.com/)
 
 #### [Trello Board](https://trello.com/b/l9vYTumX/wdi-project-2)
 
-#### [Figma Wireframes](https://www.figma.com/file/SlvcWeb3e0szCOA9F2KoXX1F/WDI13-Project-2)
+#### [Figma Wireframes](https://www.figma.com/file/SlvcWeb3e0szCOA9F2KoXX1F/WDI13-Project-2-Wireframes)
 
-### Entity Relationship Diagrams (Database Modeling)
+#### [Figma ERD](https://www.figma.com/file/Pj3Yzj8Y0i5bILnPJrk7an/WDI13-Project-2-ERD)
 
+### Schemas (Database Modeling)
+
+```
 User = {
     ID: ID,
     username: String,
@@ -34,6 +35,7 @@ Photos = {
     photoName: String,
     photoLink: String
 }
+```
 
 #### Technologies used
 

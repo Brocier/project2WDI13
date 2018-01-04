@@ -6,6 +6,8 @@
 
 ### [Heroku Link](https://schoenfeld-project2-wdi13.herokuapp.com/)
 
+### [Trello Board](https://trello.com/b/l9vYTumX/wdi-project-2)
+
 #### Technologies used
 
 * Node - js runtime

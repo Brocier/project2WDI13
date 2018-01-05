@@ -39,7 +39,7 @@ User.remove({}).then(() => {
         photoUrl: 'https://i.imgur.com/v47JqKm.jpg'
     })
 
-    tiberius.photosOfPet.push(cuteCat)
+    tiberius.photos.push(cuteCat)
 
     const murdock = new Pet({
         name: 'Murdock',
@@ -49,7 +49,7 @@ User.remove({}).then(() => {
         description: 'What a doggo',
         photoUrl: 'https://imgur.com/bFFkBgF'
     })
-    murdock.photosOfPet.push(handsomeBoy)
+    murdock.photos.push(handsomeBoy)
 
     josh.pets.push(murdock, tiberius)
 

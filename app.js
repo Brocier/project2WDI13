@@ -8,8 +8,8 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override')
 
-const index = require('./routes/index');
-const users = require('./routes/users');
+const index = require('./controllers/index');
+const users = require('./controllers/users');
 
 const app = express();
 
@@ -66,7 +66,7 @@ const userController = require('./controllers/users.js')
 app.use('/users', userController)
 
 const petController = require('./controllers/pets.js')
-app.use('/users/:userId/pets', petsController)
+app.use('/users/:userId/pets', petController)
 
 const photoController = require('./controllers/photos.js')
 app.use('/users/:userId/pets/:petId/photos', photoController)

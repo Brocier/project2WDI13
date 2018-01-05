@@ -8,9 +8,6 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override')
 
-const index = require('./controllers/index');
-const users = require('./controllers/users');
-
 const app = express();
 
 // mongoose setup
@@ -40,9 +37,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'))
 
 
-app.use('/', index);
-app.use('/users', users);
-
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   const err = new Error('Not Found');
@@ -63,6 +57,7 @@ app.use(function (err, req, res, next) {
 
 // Controllers list
 const userController = require('./controllers/users.js')
+app.use('/', userController);
 app.use('/users', userController)
 
 const petController = require('./controllers/pets.js')

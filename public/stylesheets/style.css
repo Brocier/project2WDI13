@@ -3,7 +3,12 @@ html, body {
   font-family: 'PT Sans', sans-serif;
   background-color: rgb(178, 223, 184);
 }
-
+.centeredContent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 a {
   color: #00B7FF;
 }

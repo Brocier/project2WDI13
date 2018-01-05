@@ -42,10 +42,10 @@ const userController = require('./controllers/users.js')
 app.use('/users', userController)
 
 const petController = require('./controllers/pets.js')
-// app.use('/users/:userId/pets', petController)
+app.use('/users/:userId/pets', petController)
 
 const photoController = require('./controllers/photos.js')
-// app.use('/users/:userId/pets/:petId/photos', photoController)
+app.use('/users/:userId/pets/:petId/photos', photoController)
 
 app.get('/', (req, res) => {
   res.redirect('/users')

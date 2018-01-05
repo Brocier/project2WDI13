@@ -3,6 +3,7 @@ const User = require('./models/User.js')
 const Photo = require('./models/Photos.js')
 const Pet = require('./models/Pets.js')
 const mongoose = require('mongoose')
+mongoose.Promise = global.Promise
 
 // connect to database - taken from regifter-app
 mongoose.connect('mongodb://localhost/project2WDI13', {

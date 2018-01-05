@@ -1,3 +1,4 @@
+require('dotenv').config()
 //imports
 const User = require('./models/User.js')
 const Photo = require('./models/Photos.js')
@@ -7,7 +8,7 @@ const mongoose = require('mongoose')
 mongoose.Promise = global.Promise
 
 // connect to database - taken from regifter-app
-mongoose.connect('mongodb://localhost/project2WDI13', {
+mongoose.connect(process.env.MONGODB_URI, {
     useMongoClient: true
 })
 

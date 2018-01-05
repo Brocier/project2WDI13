@@ -2,16 +2,14 @@
   Hello World
 </div>
 <div>
-  <div class="container">
-    <div class="user-cards">
-      {{#each users}}
-      <a href="/users/{{this._id}}" class="link user-card">
-        <div class="user-name">
-          {{this.firstName}}
-        </div>
-      </a>
-      {{/each}}
-    </div>
+  <div class="user-list">
+    {{#each users}}
+    <a href="/users/{{this._id}}">
+      <div>
+        {{this.firstName}}
+      </div>
+    </a>
+    {{/each}}
   </div>
 
   <div>

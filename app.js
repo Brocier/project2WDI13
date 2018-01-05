@@ -37,27 +37,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'))
 
 
-// catch 404 and forward to error handler
-app.use(function (req, res, next) {
-  const err = new Error('Not Found');
-  err.status = 404;
-  next(err);
-});
-
-// error handler
-app.use(function (err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
-});
-
 // Controllers list
 const userController = require('./controllers/users.js')
-app.use('/', userController);
 app.use('/users', userController)
 
 const petController = require('./controllers/pets.js')
@@ -66,8 +47,28 @@ const petController = require('./controllers/pets.js')
 const photoController = require('./controllers/photos.js')
 // app.use('/users/:userId/pets/:petId/photos', photoController)
 
-app.get('/', (request, response) => {
-  response.redirect('/users')
+app.get('/', (req, res) => {
+  res.redirect('/users')
 })
+
+
+
+// catch 404 and forward to error handler
+app.use((req, res, next) => {
+  const err = new Error('Not Found');
+  err.status = 404;
+  next(err);
+});
+
+// error handler
+app.use((err, req, res, next) => {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
+
+  // render the error page
+  res.status(err.status || 500);
+  res.render('error');
+});
 
 module.exports = app;

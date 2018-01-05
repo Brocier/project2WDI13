@@ -29,5 +29,5 @@ node_modules/
 # Debug log from npm
 npm-debug.log
 
-# Ignoring the dotenv file
+# dotenv environment variables file
 .env

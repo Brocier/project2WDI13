@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
     .then((users) => {
       res.render('users/index', {
         users,
-        banner: 'Index'
+        bannerTitle: 'Index'
       })
     })
     .catch((error) => {
@@ -37,7 +37,7 @@ router.get('/:userId', (req, res) => {
     .then((user) => {
       res.render('users/show', {
         user,
-        banner: user.username
+        bannerTitle: user.username
       })
     })
     .catch((error) => {
@@ -52,7 +52,7 @@ router.get('/:userId/edit', (req, res) => {
     .then((user) => {
       res.render('users/edit', {
         user,
-        banner: 'edit page'
+        bannerTitle: 'edit page'
       })
     })
     .catch((error) => {

@@ -17,7 +17,7 @@ I hope to be able to implement multiple users who can add their multiple pets, a
 
 ### Schemas (Database Modeling)
 
-```
+```js
 User = {
     ID: ID,
     username: String,

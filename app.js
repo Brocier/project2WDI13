@@ -13,11 +13,20 @@ const users = require('./routes/users');
 
 const app = express();
 
+// mongoose setup
 const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI);
 mongoose.connection.once('open', () => {
-  console.log("Connected to MongoDB!!!")
+  console.log("MongoDB has connected")
 })
+mongoose.connection.on('error', (error) => {
+  console.error(`
+    MongoDB connection error!!! 
+    ${error}
+  `)
+  process.exit(-1)
+})
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
@@ -25,7 +34,7 @@ app.set('view engine', 'hbs');
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'))
@@ -51,5 +60,21 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+// Controllers list
+const userController = require('./controllers/users.js')
+app.use('/users', userController)
+
+const petController = require('./controllers/pets.js')
+
+app.get('/', (request, response) => {
+  response.redirect('/users')
+})
+
+// Starting server
+const PORT = process.env.PORT || 3000
+app.listen(PORT, () => {
+  console.log(`Listening on port ${PORT}`)
+})
 
 module.exports = app;

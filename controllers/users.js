@@ -22,10 +22,6 @@ router.get('/new', (req, res) => {
 
 router.post('/', (req, res) => {
   const newUser = req.body
-  if (!newUser.photoUrl) {
-    newUser.photoUrl = 'http://www.fillmurray.com/g/300/300'
-  }
-
   User.create(newUser)
     .then(() => {
       res.redirect('/users')

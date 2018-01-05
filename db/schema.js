@@ -44,6 +44,9 @@ const UserSchema = new Schema(
             type: String,
             required: [true, 'You need to enter a password.']
         },
+        firstname: {
+            type: String,
+        },
         pets: [PetSchema]
     },
     {

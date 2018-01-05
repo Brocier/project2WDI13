@@ -27,6 +27,7 @@ User.remove({}).then(() => {
     const josh = new User({
         username: 'jschoe04',
         password: '12345', //thank you Spaceballs
+        firstname: 'Joshua',
         //fill this out more later
     })
 

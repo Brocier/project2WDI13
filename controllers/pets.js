@@ -35,10 +35,23 @@ router.get('/:petId', (req, res) => {
             res.render('pets/show', {
                 userId,
                 pet,
-                //pet photos here
             })
         })
         .catch((error) => { console.log(error) })
 })
 
+router.post('/', (req, res) => {
+    const userId = req.params.userId
+    const newPet = req.body
+
+    User.findById(userId)
+        .then((user) => {
+            user.pets.push(newPet)
+            return user.save()
+        })
+        .then(() => {
+            res.redirect(`/users/${userId}/pets`)
+        })
+        .catch((error) => { console.log(error) })
+})
 module.exports = router;

@@ -1,10 +1,26 @@
 <div class="nav">
   <a href="/users/{{userId}}">Back to User</a>
   <a href="/users/{{userId}}/pets">Back to Pets</a>
+  <a href="/users/{{userId}}/pets/{{petId}}/delete">Remove this pet</a>
+  <a href="/users/{{userId}}/pets/{{petId}}/put">Edit this pet's details</a>
 </div>
 
 <div class="pet-info">
   <h1>{{pet.name}}</h1>
   <h2>Age: {{pet.age}}</h2>
-  <a href="/users/{{userId}}/pets/{{petId}}/delete">Remove this pet</a>
+</div>
+</br>
+<div>
+  Photos of Pet:
+</div>
+<div>
+  {{#each pet.photos}}
+  <div>
+    <a href="/users/{{../userId}}/pets/{{this._id}}/photos/">
+      <img src="{{this.photoUrl}}" alt="{{this.description}}" height="200"> </a>
+  </div>
+  <div>
+    {{this.description}}
+  </div>
+  {{/each}}
 </div>

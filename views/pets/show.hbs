@@ -20,7 +20,8 @@
       <img src="{{this.photoUrl}}" alt="{{this.description}}" height="200"> </a>
   </div>
   <div>
-    {{this.description}}
+    {{this.description}} {{!--
+    <a href="/users/{{../userId}}/pets/{{this._id}}/photos/new">Add a Photo of {{../pet.name}}</a> --}}
   </div>
   {{/each}}
 </div>

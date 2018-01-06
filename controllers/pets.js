@@ -15,16 +15,30 @@ router.get('/', (req, res) => {
                 userName: user.firstname,
             })
         })
-        .catch((error) => {
-            console.log(error)
-        })
+        .catch((error) => { console.log(error) })
 });
+
 
 router.get('/new', (req, res) => {
     const userId = req.params.userId
     res.render('pets/new', {
         userId,
     })
+})
+
+router.get('/:petId', (req, res) => {
+    const userId = req.params.userId
+    const petId = req.params.petId
+
+    User.findById(userId)
+        .then((user) => {
+            const pet = user.pets.id(petId)
+            res.render('stores/show', {
+                userId,
+                pet,
+            })
+        })
+        .catch((error) => { console.log(error) })
 })
 
 module.exports = router;

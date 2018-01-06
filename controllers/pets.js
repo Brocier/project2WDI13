@@ -1,5 +1,5 @@
 const express = require('express');
-const router = express.Router();
+const router = express.Router({ mergeParams: true });
 
 const User = require('../db/models/User.js')
 
@@ -10,11 +10,10 @@ router.get('/', (req, res) => {
     User.findById(userId)
         .then((user) => {
             res.render('pets/index', {
-                user,
-                //pets: user.pets,
-                //userName: user.firstname,
                 userId,
-                //petName: pet.name
+                user,
+                pets: user.pets,
+                userName: user.firstname,
             })
         })
         .catch((error) => {

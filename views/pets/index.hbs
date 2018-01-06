@@ -1,4 +1,4 @@
-Pets List
+<h1>{{userName}}'s Pet's List</h1>
 <div>
   <a href="/users/{{userId}}">Back to User</a>
 </div>
@@ -8,9 +8,9 @@ Pets List
   <div class="pets-list">
     {{#each pets}}
     <a href="/users/{{../userId}}/pets/{{this._id}}">
-      <div>
+      <h2>
         {{this.name}}
-      </div>
+      </h2>
     </a>
     {{/each}}
   </div>

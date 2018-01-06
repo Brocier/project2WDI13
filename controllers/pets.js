@@ -10,7 +10,6 @@ router.get('/', (req, res) => {
         .then((user) => {
             res.render('pets/index', {
                 userId,
-                user,
                 pets: user.pets,
                 userName: user.firstname,
             })

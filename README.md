@@ -28,12 +28,12 @@ Pets = {
     ID: ID,
     petName: String,
     age: Number,
-    photos:[photoSchema],
+    image:[imageSchema],
 }
-Photos = {
+Images = {
     ID: ID,
-    photoName: String,
-    photoLink: String
+    description: String,
+    imageLink: String
 }
 ```
 

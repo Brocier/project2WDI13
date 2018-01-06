@@ -2,13 +2,13 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 mongoose.Promise = global.Promise
 
-const PhotoSchema = new Schema(
+const ImageSchema = new Schema(
     {
         description: {
             type: String,
             required: [false]
         },
-        photoUrl: {
+        imageUrl: {
             type: String,
             required: [true, `Please post a link to your pet's picture.`]
         },
@@ -27,7 +27,7 @@ const PetSchema = new Schema(
         age: {
             type: Number,
         },
-        photos: [PhotoSchema]
+        images: [ImageSchema]
     },
     {
         timestamps: {}
@@ -57,5 +57,5 @@ const UserSchema = new Schema(
 module.exports = {
     UserSchema,
     PetSchema,
-    PhotoSchema
+    ImageSchema
 }

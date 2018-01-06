@@ -11,17 +11,17 @@
 </div>
 </br>
 <div>
-  Photos of Pet:
+  Pictures of {{pet.name}}:
 </div>
 <div>
-  {{#each pet.photos}}
+  {{#each pet.images}}
   <div>
-    <a href="/users/{{../userId}}/pets/{{this._id}}/photos/">
-      <img src="{{this.photoUrl}}" alt="{{this.description}}" height="200"> </a>
+    <a href="/users/{{../userId}}/pets/{{this._id}}/images/">
+      <img src="{{this.imageUrl}}" alt="{{this.description}}" height="200"> </a>
   </div>
   <div>
     {{this.description}} {{!--
-    <a href="/users/{{../userId}}/pets/{{this._id}}/photos/new">Add a Photo of {{../pet.name}}</a> --}}
+    <a href="/users/{{../userId}}/pets/{{this._id}}/images/new">Add a Pic of {{../pet.name}}</a> --}}
   </div>
   {{/each}}
 </div>

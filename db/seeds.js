@@ -1,7 +1,7 @@
 require('dotenv').config()
 //imports
 const User = require('./models/User.js')
-const Photo = require('./models/Photos.js')
+const Image = require('./models/Images.js')
 const Pet = require('./models/Pets.js')
 const mongoose = require('mongoose')
 
@@ -37,22 +37,22 @@ User.remove({})
             name: 'Tiberius',
             age: 2,
         })
-        const cuteCat = new Photo({
+        const cuteCat = new Image({
             description: 'Laying on the couch',
-            photoUrl: 'https://i.imgur.com/v47JqKm.jpg'
+            imageUrl: 'https://i.imgur.com/v47JqKm.jpg'
         })
 
-        tiberius.photos.push(cuteCat)
+        tiberius.images.push(cuteCat)
 
         const murdock = new Pet({
             name: 'Murdock',
             age: 9,
         })
-        const handsomeBoy = new Photo({
+        const handsomeBoy = new Image({
             description: 'What a doggo',
-            photoUrl: 'https://imgur.com/bFFkBgF'
+            imageUrl: 'https://imgur.com/bFFkBgF'
         })
-        murdock.photos.push(handsomeBoy)
+        murdock.images.push(handsomeBoy)
 
         josh.pets.push(murdock, tiberius)
 

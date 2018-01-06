@@ -55,4 +55,18 @@ router.post('/', (req, res) => {
         .catch((error) => { console.log(error) })
 })
 
+router.get('/:petId/delete', (req, res) => {
+    const userId = req.params.userId
+    const petId = req.params.petId
+
+    User.findById(userId)
+        .then((user) => {
+            user.pets.id(petId).remove()
+            return user.save()
+        })
+        .then(() => {
+            res.redirect(`/users/${userId}/pets`)
+        })
+        .catch((error) => { console.log(error) })
+})
 module.exports = router;

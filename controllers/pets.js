@@ -33,9 +33,10 @@ router.get('/:petId', (req, res) => {
     User.findById(userId)
         .then((user) => {
             const pet = user.pets.id(petId)
-            res.render('stores/show', {
+            res.render('pets/show', {
                 userId,
                 pet,
+                //pet photos here
             })
         })
         .catch((error) => { console.log(error) })

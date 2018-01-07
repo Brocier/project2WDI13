@@ -3,7 +3,6 @@ const router = express.Router({ mergeParams: true });
 
 const User = require('../db/models/User.js')
 
-
 router.get('/new', (req, res) => {
     const userId = req.params.userId
     const petId = req.params.petId

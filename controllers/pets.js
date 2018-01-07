@@ -34,6 +34,7 @@ router.get('/:petId', (req, res) => {
             const pet = user.pets.id(petId)
             res.render('pets/show', {
                 userId,
+                petId,
                 pet,
             })
         })

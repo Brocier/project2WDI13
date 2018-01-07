@@ -1,7 +1,8 @@
 html, body {
   padding: 50px;
   font-family: 'PT Sans', sans-serif;
-  background-color: rgb(178, 223, 184);
+  background-color: rgb(192, 223, 196);
+  font-size: 20pt;
 }
 .centeredContent{
   display: flex;
@@ -11,4 +12,5 @@ html, body {
 }
 a {
   color: #00B7FF;
+  text-decoration: none;
 }

@@ -8,11 +8,8 @@
   <h1>{{pet.name}}</h1>
 </div>
 <div>
-  {{#each pet.images}}
   <div>
-    <h2 class="picture-title">{{this.description}}</h2>
-    <a href="/users/{{../userId}}/pets/{{../petId}}/images/{{this._id}}">
-      <img src="{{this.imageUrl}}" alt="{{this.description}}" height="300"> </a>
+    <h2 class="picture-title">{{image.description}}</h2>
+    <img src="{{image.imageUrl}}" alt="{{image.description}}" height="300">
   </div>
-  {{/each}}
 </div>

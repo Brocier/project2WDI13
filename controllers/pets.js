@@ -55,6 +55,18 @@ router.post('/', (req, res) => {
         })
         .catch((error) => { console.log(error) })
 })
+router.get(':petId/edit', (req, res) => {
+    const userId = req.params.userId
+    const petId = req.params.petId
+
+    User.findById(userId)
+        .then((user) => {
+            res.render('pets/edit', {
+                user,
+            })
+        })
+        .catch((error) => { console.log(error) })
+})
 
 router.get('/:petId/delete', (req, res) => {
     const userId = req.params.userId

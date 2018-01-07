@@ -50,7 +50,7 @@ User.remove({})
         })
         const handsomeBoy = new Image({
             description: 'What a doggo',
-            imageUrl: 'https://imgur.com/bFFkBgF'
+            imageUrl: 'https://i.imgur.com/bFFkBgF.jpg'
         })
         murdock.images.push(handsomeBoy)
 

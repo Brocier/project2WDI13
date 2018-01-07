@@ -17,24 +17,6 @@ router.get('/', (req, res) => {
         .catch((error) => { console.log(error) })
 });
 
-router.get(':petId/edit', (req, res) => {
-    const userId = req.params.userId
-    const petId = req.params.petId
-
-    User.findById(userId)
-        .then((user) => {
-            // const pet = user.pets.id(petId)
-            res.render('pets/edit', {
-                pet,
-                user,
-                userId,
-                petId,
-            })
-        })
-        .catch((error) => { console.log(error) })
-})
-
-
 router.get('/new', (req, res) => {
     const userId = req.params.userId
     res.render('pets/new', {
@@ -72,17 +54,32 @@ router.post('/', (req, res) => {
         })
         .catch((error) => { console.log(error) })
 })
-router.put('/:petId', (req, res) => {
-    const petId = req.params.petId
-    const updatedPetInfo = req.body
-    const userId = req.params.userId
 
-    User.findByIdAndUpdate(userId, updatedPetInfo, { new: true })
-        .then(() => {
-            res.redirect(`/pets/${petId}`)
-        })
-        .catch((error) => { console.log(error) })
-})
+//router.get(':petId/edit', (req, res) => {
+//     const userId = req.params.userId
+//     const petId = req.params.petId
+//     User.findById(userId)
+//         .then((user) => {
+//             // const pet = user.pets.id(petId)
+//             res.render('pets/edit', {
+//                 pet,
+//                 user,
+//                 userId,
+//                 petId,
+//             })
+//         })
+//         .catch((error) => { console.log(error) })
+// })
+// router.put('/:petId', (req, res) => {
+//     const petId = req.params.petId
+//     const updatedPetInfo = req.body
+//     const userId = req.params.userId
+//     User.findByIdAndUpdate(userId, updatedPetInfo, { new: true })
+//         .then(() => {
+//             res.redirect(`/pets/${petId}`)
+//         })
+//         .catch((error) => { console.log(error) })
+//})
 
 router.get('/:petId/delete', (req, res) => {
     const userId = req.params.userId

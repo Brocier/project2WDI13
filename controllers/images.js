@@ -14,6 +14,7 @@ router.get('/new', (req, res) => {
             res.render('images/new', {
                 userId,
                 pet,
+                petId,
             })
         })
         .catch((error) => { console.log(error) })

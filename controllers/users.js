@@ -11,9 +11,7 @@ router.get('/', (req, res) => {
         bannerTitle: 'Index'
       })
     })
-    .catch((error) => {
-      console.log(error)
-    })
+    .catch((error) => { console.log(error) })
 })
 
 router.get('/new', (req, res) => {
@@ -26,9 +24,7 @@ router.post('/', (req, res) => {
     .then(() => {
       res.redirect('/users')
     })
-    .catch((error) => {
-      console.log(error)
-    })
+    .catch((error) => { console.log(error) })
 })
 
 router.get('/:userId', (req, res) => {
@@ -40,9 +36,7 @@ router.get('/:userId', (req, res) => {
         bannerTitle: user.username
       })
     })
-    .catch((error) => {
-      console.log(error)
-    })
+    .catch((error) => { console.log(error) })
 })
 
 router.get('/:userId/edit', (req, res) => {
@@ -55,9 +49,7 @@ router.get('/:userId/edit', (req, res) => {
         bannerTitle: 'edit page'
       })
     })
-    .catch((error) => {
-      console.log(error)
-    })
+    .catch((error) => { console.log(error) })
 })
 
 router.get('/:userId/delete', (req, res) => {
@@ -67,9 +59,7 @@ router.get('/:userId/delete', (req, res) => {
     .then(() => {
       res.redirect('/users')
     })
-    .catch((error) => {
-      console.log(error)
-    })
+    .catch((error) => { console.log(error) })
 })
 
 router.put('/:userId', (req, res) => {
@@ -80,6 +70,7 @@ router.put('/:userId', (req, res) => {
     .then(() => {
       res.redirect(`/users/${userId}`)
     })
+    .catch((error) => { console.log(error) })
 })
 
 

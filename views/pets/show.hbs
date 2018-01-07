@@ -11,7 +11,7 @@
 </div>
 </br>
 <div>
-  Pictures of {{pet.name}}:
+  <h3>Pictures of {{pet.name}}:</h3>
 </div>
 <div>
   {{#each pet.images}}
@@ -20,8 +20,8 @@
       <img src="{{this.imageUrl}}" alt="{{this.description}}" height="200"> </a>
   </div>
   <div>
-    {{this.description}} {{!--
-    <a href="/users/{{../userId}}/pets/{{this._id}}/images/new">Add a Pic of {{../pet.name}}</a> --}}
+    {{this.description}}
   </div>
   {{/each}}
+  <a href="/users/{{userId}}/pets/{{petId}}/images/new">Add a Pic of {{pet.name}}</a>
 </div>

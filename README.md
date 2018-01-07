@@ -5,8 +5,10 @@
 ### App Overview
 
 AllthePets! is a basic social networking framework project I've created to emulate the basic functions of sites like imgur and reddit.
-I hope to be able to implement multiple users who can add their multiple pets, and each of those pets can have multiple pictures and other identifying information at each level.
-Then end goal for this site is to build an addon framework to imgur that allows the quick easy sharing of lots of animal pictures in easily categorizable and shareable formats.
+
+I was able to implement multiple users who can add their multiple pets, and each of those pets can have multiple pictures and other identifying information at each level.
+
+The end goal for this site is to build an addon framework to imgur that allows the quick easy sharing of lots of animal pictures in easily categorizable and shareable formats.
 
 #### [Heroku Link](https://schoenfeld-project2-wdi13.herokuapp.com/)
 
@@ -57,13 +59,30 @@ Images = {
 * Started off getting a baseline project working with npm and express-generator.
 * Worked on getting a fleshed out README to build on later.
 * Built out an ERD and wireframe.
+* Used Express-generator and npm to get my site's boilerplate out.
+* Set a full CRUD route for each level of my model.
+* Built out Schemas and Models.
+* Built a Seeds file to test with.
 
 #### Unsolved problems
 
 * I'm sure this list is going to be very long.
+* click edit on user
+* see other users pets
+* make a collage of decentralized photos
+* allow voting on photos
+* allow categorizing of pets so you can see all of a certain type
+* Year of the Dog splash screen
+* Allow users to pick Dog Cat or Other for their username portrait
+* continue as guest
+* no photos for a pet
+* sign up
+* no pets listed for a user
+* sign in
 
 #### Notes to yourself
 
+* Once you learn API's, return to this project so you can mass add images from other sites.
 * You'll get there someday!
 * Never give up!
 * Never Surrender!

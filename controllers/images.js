@@ -16,6 +16,7 @@ router.get('/new', (req, res) => {
                 pet,
             })
         })
+        .catch((error) => { console.log(error) })
 })
 
 router.post('/', (req, res) => {
@@ -34,6 +35,8 @@ router.post('/', (req, res) => {
         .then(() => {
             res.redirect(`/users/${userId}/pets/${petId}`)
         })
+        .catch((error) => { console.log(error) })
+
 })
 
 router.get('/:imageId', (req, res) => {
@@ -52,9 +55,7 @@ router.get('/:imageId', (req, res) => {
                 image,
             })
         })
-        .catch((error) => {
-            console.log(error)
-        })
+        .catch((error) => { console.log(error) })
 })
 
 router.get('/:imageId/delete', (req, res) => {
@@ -72,9 +73,7 @@ router.get('/:imageId/delete', (req, res) => {
         .then(() => {
             res.redirect(`/users/${userId}/pets/${petId}`)
         })
-        .catch((error) => {
-            console.log(error)
-        })
+        .catch((error) => { console.log(error) })
 })
 
 module.exports = router;

@@ -4,8 +4,9 @@
 
 ### App Overview
 
-Petme is a basic social networking framework project I've created to emulate the basic functions of sites like imgur and reddit.
-I hope to be able to implement multiple users who can add their multiple pets, and each of those pets can have multiple pictures and other identifying information.
+AllthePets! is a basic social networking framework project I've created to emulate the basic functions of sites like imgur and reddit.
+I hope to be able to implement multiple users who can add their multiple pets, and each of those pets can have multiple pictures and other identifying information at each level.
+Then end goal for this site is to build an addon framework to imgur that allows the quick easy sharing of lots of animal pictures in easily categorizable and shareable formats.
 
 #### [Heroku Link](https://schoenfeld-project2-wdi13.herokuapp.com/)
 

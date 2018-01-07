@@ -44,7 +44,7 @@ router.get('/:imageId', (req, res) => {
     User.findById(userId)
         .then((user) => {
             const pet = user.pets.id(petId)
-            const image = pet.imagesToReturn.id(imageId)
+            const image = pet.images.id(imageId)
 
             res.render('images/show', {
                 userId,
@@ -65,7 +65,7 @@ router.get('/:imageId/delete', (req, res) => {
     User.findById(userId)
         .then((user) => {
             const pet = user.pets.id(petId)
-            pet.imagesToReturn.id(imageId).remove()
+            pet.images.id(imageId).remove()
 
             return user.save()
         })

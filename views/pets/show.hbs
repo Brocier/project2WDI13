@@ -16,7 +16,7 @@
 <div>
   {{#each pet.images}}
   <div>
-    <a href="/users/{{../userId}}/pets/{{this._id}}/images/">
+    <a href="/users/{{../userId}}/pets/{{../petId}}/images/{{this._id}}">
       <img src="{{this.imageUrl}}" alt="{{this.description}}" height="200"> </a>
   </div>
   <div>

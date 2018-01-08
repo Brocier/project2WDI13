@@ -1,10 +1,3 @@
-<div class="nav">
-  <a href="/users/{{userId}}">Back to User</a>
-  <a href="/users/{{userId}}/pets">Back to Pets</a>
-  <a href="/users/{{userId}}/pets/{{petId}}/delete">Remove this pet</a>
-  <a href="/users/{{userId}}/pets/{{petId}}/edit">Edit this pet's details</a> Can't get editting nested things to work
-</div>
-
 <div class="pet-info">
   <h1>{{pet.name}}</h1>
   <h2>Age: {{pet.age}}</h2>
@@ -24,4 +17,14 @@
   </div>
   {{/each}}
   <a href="/users/{{userId}}/pets/{{petId}}/images/new">Add a Pic of {{pet.name}}</a>
+</div>
+
+<div class="nav">
+  <a href="/users/{{userId}}">Back to User</a>
+  <br>
+  <a href="/users/{{userId}}/pets">Back to Pets</a>
+  <br>
+  <a href="/users/{{userId}}/pets/{{petId}}/delete">Remove this pet</a>
+  <br>
+  <a href="/users/{{userId}}/pets/{{petId}}/edit">Edit this pet's details</a>
 </div>

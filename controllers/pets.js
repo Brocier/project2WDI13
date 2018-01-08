@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router({ mergeParams: true });
 
 const User = require('../db/models/User.js')
+const Pet = require('../db/models/Pets.js')
 
 /* GET pets home page. */
 router.get('/', (req, res) => {
@@ -73,11 +74,20 @@ router.post('/', (req, res) => {
 
 router.put('/:petId', (req, res) => {
     const petId = req.params.petId
-    const updatedPetInfo = req.body
     const userId = req.params.userId
-    User.findByIdAndUpdate(userId, updatedPetInfo, { new: true })
+
+    const updatedPet = req.body
+
+    User.findById(userId)
+        .then((user) => {
+            const originalPet = user.pets.id(petId)
+            originalPet.name = updatedPet.name
+            originalPet.age = updatedPet.age
+
+            return user.save()
+        })
         .then(() => {
-            res.redirect(`/pets/${petId}`)
+            res.redirect(`${petId}`)
         })
         .catch((error) => { console.log(error) })
 })

@@ -1,0 +1,57 @@
+html{
+    height: 100%;
+    font-size: 20pt;
+}
+.main{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    text-align: center;
+    font-family: 'Roboto';
+}
+.header{
+    height: 7vh;
+    flex-shrink: 0;
+}
+.gameboard{
+    display: Flex;
+    height: 100%;
+    background-color: ghostwhite;
+    justify-content: space-around;
+}
+.wrong{
+    text-decoration: line-through;
+    text-decoration-color: red;
+}
+.lettersRemaining{
+    margin: 10%;
+    height: 22%;
+    width: 320px;
+    text-transform: uppercase;
+    flex-flow: row wrap;
+    display: flex;
+    border: solid black 1px;
+}
+.letter{    
+    font-size: 30pt;
+    flex-flow: wrap;
+    height: 40px;
+    padding: 4px;
+}
+.guessingArea{
+    margin: 7%;
+    height: 22%;
+    width: 320px;
+}
+.hidden{
+    visibility: hidden;
+}
+.footer{
+    /* height: 5vh; */
+    flex-shrink: 0;
+    text-align: right;
+    margin: 3px;
+}
+/* font-weight thin if used and bold if not */
+/* Use the scale-in and scale-out classes to make the letters appear and disappear. */
